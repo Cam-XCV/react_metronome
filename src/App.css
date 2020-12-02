@@ -2,37 +2,64 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container{
+  width: 80%;
+  margin: auto;
+  position: fixed;
+  top: 25%;
+  left: 10%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#tempo-slider {
+  appearance: none;
+  width: 80%;
+  height: 20px;
+  background: rgb(255, 255, 255);
+  border: 2px solid black;
+  border-radius: 3px;
+  outline: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+#tempo-slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: rgb(46, 46, 46); /* Green background */
+  cursor: pointer; /* Cursor on hover */
+
+}
+
+.metronome-display > h1 {
+  font-size: 30px;
+  color: rgb(46, 46, 46)
+}
+
+.metronome-display > p {
+  font-size: 25px;
+  font-weight: bold;
+  color: rgb(46, 46, 46);
+}
+
+.controls {
+  margin-top: 10px;
+  padding: 3px;
+}
+
+.controls > button, .controls > select {
+  margin: 10px;
+  padding: 5px;
   color: white;
+  border-radius: 3px;
+  border: none;
+  background:rgb(67, 67, 67);
+  min-width: 4em;
+  outline: 0;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.controls > button:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  cursor: pointer;
 }
